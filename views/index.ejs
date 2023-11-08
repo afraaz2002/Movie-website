@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Movie App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav flex">
+        <h1>MoviesTime</h1>
+        <form action="/showMovie" method="post">
+            <input type="text" id="movieInput" name="movieName" placeholder="Enter a movie/series name..">
+            <button type="submit" id="btn">Search</button>
+        </form>
+    </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="movies">
+                 <% if(locals.data) {
+                    data.forEach((movie) => {
+                  %>
+                <div class="movie ">
+                    <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>"
+                        alt="<%= movie.title %>" id="poster">
+      
+                    <div class="movieDetails flex">
+                        <p id="title"><%= movie.title %></p>
+                        <p id="rating"><%= movie.vote_average %></p>
+                    </div>
+                    <div id="overview">
+                        <h2>Overview</h2>
+                   <p><%= movie.overview %></p>
+                    </div>
+                </div>
+
+                <% });
+                } %>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

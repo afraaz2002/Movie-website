@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background-color: #1F1D36;
+    padding: 1.5rem 0;
+}
+
+.nav {
+    width: 87%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.header h1 {
+    background-color: #700B97;
+    padding: 0.2rem 1.6rem;
+    border-radius: 5px;
+}
+
+#movieInput,
+#btn {
+    color: white;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 20px;
+}
+
+#movieInput {
+    width: 25rem;
+    margin-right: 2rem;
+    background-color: transparent;
+    border: 3px #700B97 solid;
+    outline: none;
+}
+
+#movieInput:focus {
+    border: 3px #d877ff solid;
+}
+
+#btn {
+    border: none;
+    background-color: #8E05C2;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+main {
+    background-color: #3F3351;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 90vh;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.movie {
+    margin: 1.3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#overview {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255);
+    color: #1F1D36;
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.2s ease-in;
+}
+
+.movie:hover #overview {
+    transform: translateY(0);
+}
+
+#poster {
+    width: 100%;
+}
+
+.movieDetails {
+    width: 100%;
+    background-color: #1F1D36;
+    padding: 1rem;
+    min-height: 8rem;
+    margin-top: -0.5rem;
+    align-items: flex-start;
+    overflow-wrap: break-word;
+}
+
+#title {
+    width: 75%;
+    font-size: 1.2rem;
+}
+
+#rating {
+    background-color: #700B97;
+    padding: 0.5rem 0.7rem;
+    color: greenyellow;
+    font-weight: bold;
+}
